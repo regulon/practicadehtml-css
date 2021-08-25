@@ -1,46 +1,79 @@
-/*Este selector se usa para aplicar en todo el documento*/
+/*El selector (*) se usa para aplicar en todo el documento
+lo que le indican los atributos de estilo "margin" y "padding"
+mediante los valores 0px en ambos atributos. Se le llama 
+selector universal.*/
 * { 
     margin: 0px; 
     padding: 0px; 
-   } 
-   h1 { 
+   }
+
+/*Todos los elementos h1 y h2 del documento se mostraran con los
+atributos declarados y con los valores expresados*/
+h1 { 
     font: bold 20px verdana, sans-serif; 
    } 
-   h2 { 
+h2 { 
     font: bold 14px verdana, sans-serif; 
    }
+
+/*El valor del atributo display será aplicado a todos los elementos
+estructurales listados antes de la llave de apertura declarándolos 
+como elementos block*/
 header, section, footer, aside, nav, article, figure, figcaption, 
 hgroup{ 
     display: block; 
-} 
+}
+
+/*Dentro del cuerpo del documento todos los textos estarán posicionados
+en el centro*/
 body { 
     text-align: center; 
-} 
+}
+
+/*Elemento referenciado a través del valor de su atributo id.El carácter 
+# le está diciendo al navegador que el elemento afectado por este conjunto
+de estilos tiene el atributo id con el valor "agrupar".*/
 #agrupar { 
     width: 960px; 
     margin: 15px auto; 
-    text-align: left; 
+    text-align: left;
 }
+
+/*Igual al comentario anterior, pero solo para el bloque <header> que tiene
+el atributo id con el valor "cabecera".*/
 #cabecera { 
  background: #FFFBB9; 
  border: 1px solid #999999; 
  padding: 20px; 
 }
+
+/*Referencia al elemento <nav> por su atributo id con el valor "menu". */
 #menu { 
  background: #CCCCCC; 
  padding: 5px 15px; 
-} 
+}
+
+/*Aqui se referencia los elemento <li> dentro del elemento <nav> usando
+el selector #menu li.*/
 #menu li { 
  display: inline-block; 
  list-style: none; 
  padding: 5px; 
  font: bold 14px verdana, sans-serif; 
 }
+
+/*Caja ordenada horizontalmente. Se utiliza el elemento <section> por su 
+atributo id con el valor "seccion". float hace que el elemento <section> flote
+a la izquierda o a la derecha, tanto como sea posible, en el área disponible.*/
 #seccion { 
  float: left; 
  width: 660px; 
  margin: 20px; 
-} 
+}
+
+/*Caja ordenada horizontalmente. Se utiliza el elemento <aside> por su 
+atributo id con el valor "columna". float hace que el elemento <aside> flote
+a la izquierda o a la derecha, tanto como sea posible, en el área disponible.*/
 #columna { 
  float: left; 
  width: 220px; 
@@ -49,3 +82,29 @@ body {
  background: #CCCCCC; 
 }
 
+
+/*Elemento referenciado a través del valor de su atributo id.El carácter 
+# le está diciendo al navegador que el elemento afectado por este conjunto
+de estilos tiene el atributo id con el valor "pie".*/
+#pie { 
+    clear: both; 
+    text-align: center; 
+    padding: 20px; 
+    border-top: 2px solid #999999; 
+}
+
+article { 
+    background: #FFFBCC; 
+    border: 1px solid #999999; 
+    padding: 20px; 
+    margin-bottom: 15px; 
+   } 
+   article footer { 
+    text-align: right; 
+   } 
+   time { 
+    color: #999999; 
+   } 
+   figcaption { 
+    font: italic 14px verdana, sans-serif; 
+   } 
